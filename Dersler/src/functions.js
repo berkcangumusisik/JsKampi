@@ -58,3 +58,41 @@ let products = [
 ]
 
 addToCart4(products)
+function add(...numbers) { //rest
+    let total = 0
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i]        
+    }
+    console.log(total)
+}
+add(20,30)
+add(20,30,40)
+add(20,30,40,50)
+
+let numbers=[30,10,500,600,120]
+console.log(...numbers)
+console.log(Math.max(...numbers)) //spread
+
+let [icAnadolu, marmara, karadeniz,[icAnadoluSehirleri,marmaraSehirleri,karadenizSehirleri]] = [
+    {name: "İç Anadolu",population:"20M"},
+    {name: "Marmara",population:"30M"},
+    {name: "Karadeniz",population:"10M"},
+    [
+        ["Ankara","Konya"],
+        ["İstanbul","Bursa"],
+        ["Sinop","Trabzon"]
+    ]
+]
+console.log(icAnadolu.name)
+console.log(icAnadolu.population)
+console.log(marmara)
+console.log(karadeniz)
+console.log(icAnadoluSehirleri)
+console.log(marmaraSehirleri)
+console.log(karadenizSehirleri)
+
+let newProductName,newUnitPrice,newQuantity
+({productName:newProductName,unitPrice:newUnitPrice,quantity:newQuantity}= {productName: "Elma", unitPrice: 10, quantity: 5 })
+console.log(newProductName)
+console.log(newUnitPrice)
+console.log(newQuantity)
